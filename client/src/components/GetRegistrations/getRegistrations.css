@@ -1,0 +1,42 @@
+.root {
+  display: flex;
+  justify-content: center;
+  margin-left: 20%;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.inline {
+  display: inline;
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40vh;
+}
+
+.button {
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+.divButTyp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.typoText {
+  margin-left: 20px;
+}
+
+.newDivS {
+  display: flex;
+  flex-direction: row;
+}
+
+.pagS {
+  margin-top: 10px;
+}

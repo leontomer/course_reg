@@ -1,0 +1,16 @@
+.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40vh;
+}
+
+.mainDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.typoText {
+  margin-left: 20px;
+}

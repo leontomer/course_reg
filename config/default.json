@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://Aw5wAm4mUGi2gTjq:Aw5wAm4mUGi2gTjq@cluster0.xt0mn.gcp.mongodb.net/courseRegistrations?retryWrites=true&w=majority",
+  "jwtSecret": "lenotomer"
+}

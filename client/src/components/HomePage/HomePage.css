@@ -1,0 +1,162 @@
+@media only screen and (min-width: 945px) {
+  .formContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+
+@media only screen and (max-width: 945px) {
+  .formContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 945px) {
+  .textFields {
+    display: flex;
+    margin-right: 40px;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 945px) {
+  .textFields2 {
+    display: flex;
+    margin-left: 40px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 945px) {
+  .textFields {
+    display: flex;
+    margin-left: 40px;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 945px) {
+  .textFields2 {
+    display: flex;
+    margin-left: 40px;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 945px) {
+  .phone {
+    width: 145px;
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 945px) {
+  .phone {
+    background-color: #ffffff;
+    width: 170px;
+    margin-left: 15px;
+  }
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40vh;
+}
+
+.captchaModal {
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+}
+
+.mainDivStyle {
+  background-color: #f8f8f8;
+}
+
+.videoDivStyle {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.formDivStyle {
+  background-color: #383838;
+}
+
+.textDivStyle {
+  display: flex;
+  justify-content: center;
+}
+
+.textColor {
+  color: #ffffff;
+}
+
+.textFieldDiv {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.textField2Div {
+  margin-top: 20px;
+}
+
+.textFieldStyle {
+  background-color: #ffffff;
+}
+
+.firstCheckBox {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  margin-left: 15%;
+  margin-top: 25px;
+}
+
+.span {
+  color: #f0ffff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.secondCheckBox {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  margin-left: 25%;
+}
+
+.pdfModal {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 50px;
+}
+
+.phoneDiv {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.acTextField {
+  background-color: #ffffff;
+  width: 65px;
+}
+
+.firstDiv {
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}

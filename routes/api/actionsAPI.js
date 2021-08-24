@@ -3,6 +3,7 @@ const router = express.Router();
 const register = require("../../models/register.model");
 var nodemailer = require("nodemailer");
 const CryptoJS = require("crypto-js");
+const auth = require("../../auth");
 
 router.post("/saveDetails", async (req, res) => {
   try {
@@ -89,7 +90,7 @@ router.post("/confirmation", async (req, res) => {
   }
 });
 
-router.get("/registrations", async (req, res) => {
+router.get("/registrations", auth, async (req, res) => {
   try {
     const registrations = await register.find();
     res.json(registrations);
@@ -98,7 +99,7 @@ router.get("/registrations", async (req, res) => {
   }
 });
 
-router.post("/resendEmail", async (req, res) => {
+router.post("/resendEmail", auth, async (req, res) => {
   try {
     const { email } = req.body;
 

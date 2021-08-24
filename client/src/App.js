@@ -7,7 +7,12 @@ import LoginPage from "./components/LoginPage/LoginPage";
 import PrivateRoute from "./components/Routes/PrivateRoute";
 import { mainContext } from "./Contexts/main-context";
 import getRegistrations from "./components/GetRegistrations/getRegistrations";
+import setAuthToken from "./utilities/setAuthToken";
+
 function App() {
+  if (localStorage.token) {
+    setAuthToken(localStorage.token);
+  }
   return (
     <mainContext>
       <Router>

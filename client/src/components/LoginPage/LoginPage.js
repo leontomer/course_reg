@@ -69,7 +69,6 @@ export default function LoginPage({ history }) {
       e.preventDefault();
       setIsLoading(true);
       const res = await axios.post("/auth/login", loginData);
-      console.log(res.data);
       if (res.data) login(res.data);
       setIsLoading(false);
       history.push("/getRegistrations");

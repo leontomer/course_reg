@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import HomePage from "./components/HomePage/HomePage";
@@ -8,11 +8,16 @@ import PrivateRoute from "./components/Routes/PrivateRoute";
 import { mainContext } from "./Contexts/main-context";
 import getRegistrations from "./components/GetRegistrations/getRegistrations";
 import setAuthToken from "./utilities/setAuthToken";
-
+import { useAuth } from "./Contexts/auth-context";
 function App() {
-  if (localStorage.token) {
-    setAuthToken(localStorage.token);
-  }
+  const { isAuthenticated } = useAuth();
+
+  useEffect(() => {
+    if (localStorage.token) {
+      setAuthToken(localStorage.token);
+    }
+  }, [isAuthenticated]);
+
   return (
     <mainContext>
       <Router>

@@ -21,7 +21,7 @@ export default function GetRegistrations() {
   const [severity, setSeverity] = React.useState("error");
   const [msg, setMsg] = React.useState("error");
   const { logout } = useAuth();
-  const { isAuthenticated } = useAuth();
+
   function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
   }
@@ -39,7 +39,7 @@ export default function GetRegistrations() {
       setRegistrations(res.data);
       setIsLoading(false);
     })();
-  }, [isAuthenticated]);
+  }, []);
 
   const handleCloseSnackbar = (event, reason) => {
     if (reason === "clickaway") {

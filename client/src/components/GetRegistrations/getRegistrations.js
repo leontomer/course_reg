@@ -11,6 +11,7 @@ import Pagination from "@material-ui/lab/Pagination";
 import ParticlesBg from "particles-bg";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import "./getRegistrations.css";
+import { useAuth } from "../../Contexts/auth-context";
 
 export default function GetRegistrations() {
   const [registrations, setRegistrations] = React.useState([]);
@@ -19,7 +20,10 @@ export default function GetRegistrations() {
   const [isLoading, setIsLoading] = useState(false);
   const [severity, setSeverity] = React.useState("error");
   const [msg, setMsg] = React.useState("error");
-
+  const { logout } = useAuth();
+  const { isAuthenticated } = useAuth();
+  const [userIsAuthenticated, setUserIsAuthenticated] =
+    useState(isAuthenticated);
   function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
   }
@@ -37,7 +41,7 @@ export default function GetRegistrations() {
       setRegistrations(res.data);
       setIsLoading(false);
     })();
-  }, []);
+  }, [userIsAuthenticated]);
 
   const handleCloseSnackbar = (event, reason) => {
     if (reason === "clickaway") {
@@ -185,11 +189,13 @@ export default function GetRegistrations() {
                     />
                   </ListItem>
                 ))}
-            </List>
-          </div>
+            </List>{" "}
+          </div>{" "}
         </div>
       )}
-
+      <Button variant="contained" color="secondary" onClick={logout}>
+        Logout
+      </Button>
       <Snackbar
         open={open}
         autoHideDuration={6000}

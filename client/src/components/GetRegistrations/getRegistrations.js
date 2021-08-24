@@ -34,7 +34,9 @@ export default function GetRegistrations() {
   useEffect(() => {
     (async function loadData() {
       setIsLoading(true);
-
+      if (localStorage.token) {
+        axios.defaults.headers.common["x-auth-token"] = localStorage.token;
+      }
       const res = await axios.get("/actions/registrations");
       setRegistrations(res.data);
       setIsLoading(false);
